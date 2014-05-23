@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{ user.first_name|capfirst }} {{ user.last_name|capfirst }}{% endblock %}
+
+
+
+{% block body %}
+
+
+	<div id="page1" data-role="page" data-theme="a">
+		<header data-role="header" data-position="inline">
+			<img id="title-image" src="{% static "messageboard_project/images/AIS-Messageboard-Logo.png" %}" alt="AIS Message Board"/>
+		</header>
+		<section data-role="content" data-theme="a">
+            <p>Welcome to page 1...</p>
+            <a href="#page2" data-transition="fade">Page 2</a>
+		</section>
+        <footer data-role="footer" data-theme="a">
+            <h2>&copy Alvarado ISD 2014</h2>
+        </footer>
+	</div>
+
+{% endblock %}
+
+
