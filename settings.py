@@ -98,10 +98,11 @@ LOGIN_ERROR_URL    = '/google/error/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'rdboyett@gmail.com'
-EMAIL_HOST_PASSWORD = 'Dallas21'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+with open(os.path.join(BASE_DIR,'gmail_password.txt')) as f:
+    EMAIL_HOST_PASSWORD = f.read().strip()
 
 
 
